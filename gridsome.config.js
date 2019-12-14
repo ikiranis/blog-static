@@ -1,6 +1,6 @@
 module.exports = {
-  siteName: 'Gridsome',
-  siteDescription: 'A WordPress starter for Gridsome',
+  siteName: 'error.gr',
+  siteDescription: 'Μια άλλη ματιά στην τεχνολογία (και όχι μόνο)',
 
   templates: {
     WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
@@ -12,7 +12,7 @@ module.exports = {
     {
       use: '@gridsome/source-wordpress',
       options: {
-        baseUrl: process.env.WORDPRESS_URL, // required
+        baseUrl: 'https://error.gr/', // required
         typeName: 'WordPress', // GraphQL schema name (Optional)
       }
     }
