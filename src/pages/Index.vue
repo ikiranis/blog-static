@@ -1,6 +1,5 @@
 <template>
   <Layout>
-    <h1>error.gr</h1>
     <ul class="post-list">
       <li v-for="{ node } in $page.allWordPressPost.edges" :key="node.id">
         <Post :post="node" />

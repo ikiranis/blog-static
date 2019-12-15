@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ead76ca5-cc82-4f61-acb7-ce6b4ae12a17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gridsome.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gridsome.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gridsome.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gridsome.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/layouts/Default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/Index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +18,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1UyxfTwRlX8hjze93nUYD1fyMj5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../error.gr/www/public" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -54,6 +55,8 @@
       <option name="presentableId" value="Default" />
       <updated>1576342739451</updated>
       <workItem from="1576342741343" duration="968000" />
+      <workItem from="1576416422965" duration="735000" />
+      <workItem from="1576419323313" duration="3242000" />
     </task>
     <task id="LOCAL-00001" summary="Remove .idea">
       <created>1576342889638</created>
@@ -79,6 +82,10 @@
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
     <state x="345" y="177" width="1220" height="768" key="CommitChangelistDialog2/0.36.1920.1044@0.36.1920.1044" timestamp="1576342889508" />
+    <state x="960" y="167" width="630" height="715" key="FileChooserDialogImpl" timestamp="1576429073316">
+      <screen x="0" y="34" width="2560" height="1046" />
+    </state>
+    <state x="960" y="167" width="630" height="715" key="FileChooserDialogImpl/0.34.2560.1046/2560.0.1920.1080@0.34.2560.1046" timestamp="1576429073316" />
     <state x="455" y="231" width="1000" height="661" key="Vcs.Push.Dialog.v2" timestamp="1576342893762">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
