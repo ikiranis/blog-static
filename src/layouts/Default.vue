@@ -2,7 +2,6 @@
   <div class="layout">
     <header class="header">
       <nav class="nav mt-3 ml-auto">
-        <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/contact/">Επικοινωνία</g-link>
       </nav>
     </header>

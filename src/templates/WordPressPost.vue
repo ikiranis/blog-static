@@ -32,6 +32,7 @@ query WordPressPost ($id: ID!) {
   wordPressPost(id: $id) {
     title
     content
+    slug
     featuredMedia {
       sourceUrl
       altText

@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ead76ca5-cc82-4f61-acb7-ce6b4ae12a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Post.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/Default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Contact.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,16 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/images" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Post.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/error.gr-static/src/components/Post.vue" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Post.vue" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -83,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576854264841</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Styling">
+      <created>1576854520656</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576854520656</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,21 +113,38 @@
     <MESSAGE value="Remove .idea" />
     <MESSAGE value="Display logo" />
     <MESSAGE value="Install bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Install bootstrap" />
+    <MESSAGE value="Styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styling" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="345" y="177" width="1220" height="768" key="CommitChangelistDialog2" timestamp="1576854264683">
+    <state x="345" y="177" width="1220" height="768" key="CommitChangelistDialog2" timestamp="1576854520525">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state x="345" y="177" width="1220" height="768" key="CommitChangelistDialog2/0.36.1920.1044@0.36.1920.1044" timestamp="1576854264683" />
+    <state x="345" y="177" width="1220" height="768" key="CommitChangelistDialog2/0.36.1920.1044@0.36.1920.1044" timestamp="1576854520525" />
     <state x="960" y="167" width="630" height="715" key="FileChooserDialogImpl" timestamp="1576429073316">
       <screen x="0" y="34" width="2560" height="1046" />
     </state>
     <state x="960" y="167" width="630" height="715" key="FileChooserDialogImpl/0.34.2560.1046/2560.0.1920.1080@0.34.2560.1046" timestamp="1576429073316" />
-    <state width="623" height="498" key="SwitcherDM" timestamp="1576854428335">
+    <state width="1858" height="246" key="GridCell.Tab.0.bottom" timestamp="1576859878209">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state width="623" height="498" key="SwitcherDM/0.36.1920.1044@0.36.1920.1044" timestamp="1576854428335" />
+    <state width="1858" height="246" key="GridCell.Tab.0.bottom/0.36.1920.1044@0.36.1920.1044" timestamp="1576859878209" />
+    <state width="1858" height="246" key="GridCell.Tab.0.center" timestamp="1576859878208">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1858" height="246" key="GridCell.Tab.0.center/0.36.1920.1044@0.36.1920.1044" timestamp="1576859878208" />
+    <state width="1858" height="246" key="GridCell.Tab.0.left" timestamp="1576859878207">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1858" height="246" key="GridCell.Tab.0.left/0.36.1920.1044@0.36.1920.1044" timestamp="1576859878207" />
+    <state width="1858" height="246" key="GridCell.Tab.0.right" timestamp="1576859878209">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1858" height="246" key="GridCell.Tab.0.right/0.36.1920.1044@0.36.1920.1044" timestamp="1576859878209" />
+    <state width="623" height="498" key="SwitcherDM" timestamp="1576859976093">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="623" height="498" key="SwitcherDM/0.36.1920.1044@0.36.1920.1044" timestamp="1576859976093" />
     <state x="455" y="231" width="1000" height="661" key="Vcs.Push.Dialog.v2" timestamp="1576342893762">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
