@@ -11,7 +11,7 @@
 
 <page-query>
 query Home ($page: Int) {
-  allWordPressPost (page: $page, perPage: 10) @paginate {
+  allWordPressPost (page: $page, perPage: 3) @paginate {
     pageInfo {
       totalPages
       currentPage
@@ -21,7 +21,7 @@ query Home ($page: Int) {
         id
         title
         path
-        excerpt
+        content
       }
     }
   }
@@ -38,7 +38,7 @@ export default {
     Post
   },
   metaInfo: {
-    title: 'error.gr'
+    title: 'Home'
   }
 }
 </script>

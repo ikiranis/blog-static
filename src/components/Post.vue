@@ -1,10 +1,9 @@
 <template>
   <div>
-    <h2 v-html="post.title" />
-    <div v-html="post.excerpt" />
     <g-link :to="post.path">
-      Read More
+      <h2 v-html="post.title" />
     </g-link>
+    <div v-html="post.content" />
   </div>
 </template>
 
