@@ -3,15 +3,15 @@
     <header class="header">
       <nav class="nav mt-3 ml-auto">
         <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
+        <g-link class="nav__link" to="/contact/">Επικοινωνία</g-link>
       </nav>
     </header>
 
-    <g-link to="/">
-      <img src="../images/error_logo.jpg" alt="logo">
+    <g-link to="/" >
+      <img src="../images/error_logo.jpg" alt="logo" class="mb-3">
     </g-link>
 
-    <slot/>
+    <slot />
   </div>
 </template>
 
