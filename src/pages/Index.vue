@@ -21,7 +21,6 @@ query Home ($page: Int) {
         id
         title
         path
-        slug
         excerpt
       }
     }
