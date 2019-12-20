@@ -9,6 +9,9 @@
         <g-link class="nav__link" to="/about/">About</g-link>
       </nav>
     </header>
+
+    <img src="../images/error_logo.jpg" alt="logo">
+
     <slot/>
   </div>
 </template>
