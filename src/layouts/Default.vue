@@ -1,16 +1,15 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>
-        <g-link to="/">Error.gr</g-link>
-      </strong>
-      <nav class="nav">
+      <nav class="nav mt-3 ml-auto">
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about/">About</g-link>
       </nav>
     </header>
 
-    <img src="../images/error_logo.jpg" alt="logo">
+    <g-link to="/">
+      <img src="../images/error_logo.jpg" alt="logo">
+    </g-link>
 
     <slot/>
   </div>
