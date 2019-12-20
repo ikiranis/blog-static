@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <h1 v-html="$page.wordPressPost.title"/>
+    <h5>{{ $page.wordPressPost.date }}</h5>
     <img
       v-if="$page.wordPressPost.featuredMedia"
       :src="$page.wordPressPost.featuredMedia.sourceUrl"
@@ -8,6 +9,16 @@
       :alt="$page.wordPressPost.featuredMedia.altText"
     />
     <div v-html="$page.wordPressPost.content"/>
+
+    <h4>Comments</h4>
+
+    <ul class="list mx-5">
+      <li v-for="comment in this.comments" :key="comment.id" >
+        <h5>{{ comment.author_name }}</h5>
+        <div v-html="comment.content.rendered"/>
+      </li>
+    </ul>
+
     <template v-if="$page.wordPressPost.categories.length">
       <h4>Posted in</h4>
       <ul class="list categories">
@@ -30,8 +41,10 @@
 <page-query>
 query WordPressPost ($id: ID!) {
   wordPressPost(id: $id) {
+    id
     title
     content
+    date
     featuredMedia {
       sourceUrl
       altText
@@ -54,10 +67,36 @@ query WordPressPost ($id: ID!) {
 </page-query>
 
 <script>
+  const axios = require('axios')
+
 export default {
   metaInfo () {
     return {
       title: this.$page.wordPressPost.title
+    }
+  },
+
+  data() {
+    return {
+      comments: []
+    }
+  },
+
+  mounted() {
+    this.getComments()
+  },
+
+  methods: {
+    getComments() {
+      axios.get('https://error.gr/wp-json/wp/v2/comments?post='
+              + this.$page.wordPressPost.id
+              + '&orderby=date&order=asc')
+          .then((res) => {
+            this.comments = res.data
+          })
+          .catch((err) => {
+            console.log(err);
+          })
     }
   }
 }
