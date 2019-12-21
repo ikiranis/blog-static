@@ -12,7 +12,7 @@ module.exports = {
     {
       use: '@gridsome/source-wordpress',
       options: {
-        baseUrl: 'https://error.gr', // required
+        baseUrl: process.env.GRIDSOME_WORDPRESSURL, // required
         typeName: 'WordPress', // GraphQL schema name (Optional)
       }
     }
