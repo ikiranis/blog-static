@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 v-html="$page.wordPressPost.title"/>
+    <h2 v-html="$page.wordPressPost.title" class="text-center"/>
 
     <h5>{{ postDate }}</h5>
 
