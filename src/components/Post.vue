@@ -4,7 +4,9 @@
       <h3 v-html="post.title" class="text-center" />
     </g-link>
 
-    <small>{{ postDate }}</small>
+    <div class="row">
+      <small class="mx-auto">{{ postDate }}</small>
+    </div>
 
     <div v-html="post.content" />
   </div>

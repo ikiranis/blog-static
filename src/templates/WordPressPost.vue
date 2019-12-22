@@ -2,7 +2,9 @@
   <Layout>
     <h3 v-html="$page.wordPressPost.title" class="text-center"/>
 
-    <small>{{ postDate }}</small>
+    <div class="row">
+      <small class="mx-auto">{{ postDate }}</small>
+    </div>
 
     <div class="row px-3">
       <div v-if="$page.wordPressPost.categories.length">
