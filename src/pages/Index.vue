@@ -22,6 +22,7 @@ query Home ($page: Int) {
         title
         path
         content
+        date
       }
     }
   }
