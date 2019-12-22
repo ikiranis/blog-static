@@ -2,7 +2,7 @@
   <Layout>
     <h1 v-html="$page.wordPressPost.title"/>
 
-    <h5>{{ $page.wordPressPost.date }}</h5>
+    <h5>{{ postDate }}</h5>
 
     <img
       v-if="$page.wordPressPost.featuredMedia"
@@ -73,6 +73,7 @@ query WordPressPost ($id: ID!) {
 <script>
 
   import axios from 'axios'
+  import moment from 'moment'
 
 export default {
   metaInfo () {
@@ -84,6 +85,12 @@ export default {
   data() {
     return {
       comments: []
+    }
+  },
+
+  computed: {
+    postDate() {
+      return moment(this.$page.wordPressPost.date).format('DD/MM/YYYY')
     }
   },
 
