@@ -4,7 +4,7 @@
       <h2 v-html="post.title" class="text-center" />
     </g-link>
 
-    <h5>{{ postDate }}</h5>
+    <small>{{ postDate }}</small>
 
     <div v-html="post.content" />
   </div>

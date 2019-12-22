@@ -2,7 +2,25 @@
   <Layout>
     <h2 v-html="$page.wordPressPost.title" class="text-center"/>
 
-    <h5>{{ postDate }}</h5>
+    <small>{{ postDate }}</small>
+
+    <div class="row px-3">
+      <div v-if="$page.wordPressPost.categories.length" class="mr-auto">
+        <ul class="list">
+          <li v-for="category in $page.wordPressPost.categories" :key="category.id" >
+            <g-link :to="category.path">{{ category.title }}</g-link>
+          </li>
+        </ul>
+      </div>
+
+      <div v-if="$page.wordPressPost.tags.length" class="ml-auto">
+        <ul class="list">
+          <li v-for="tag in $page.wordPressPost.tags" :key="tag.id" >
+            <g-link :to="tag.path">{{ tag.title }}</g-link>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <img
       v-if="$page.wordPressPost.featuredMedia"
@@ -23,22 +41,6 @@
       </ul>
     </div>
 
-    <template v-if="$page.wordPressPost.categories.length">
-      <h4>Posted in</h4>
-      <ul class="list categories">
-        <li v-for="category in $page.wordPressPost.categories" :key="category.id" >
-          <g-link :to="category.path">{{ category.title }}</g-link>
-        </li>
-      </ul>
-    </template>
-    <template v-if="$page.wordPressPost.tags.length">
-      <h4>Tags</h4>
-      <ul class="list tags">
-        <li v-for="tag in $page.wordPressPost.tags" :key="tag.id" >
-          <g-link :to="tag.path">{{ tag.title }}</g-link>
-        </li>
-      </ul>
-    </template>
   </Layout>
 </template>
 
