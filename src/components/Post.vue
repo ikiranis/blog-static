@@ -1,7 +1,7 @@
 <template>
   <div>
     <g-link :to="post.path">
-      <h2 v-html="post.title" class="text-center" />
+      <h3 v-html="post.title" class="text-center" />
     </g-link>
 
     <small>{{ postDate }}</small>

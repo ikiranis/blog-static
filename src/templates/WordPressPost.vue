@@ -1,33 +1,27 @@
 <template>
   <Layout>
-    <h2 v-html="$page.wordPressPost.title" class="text-center"/>
+    <h3 v-html="$page.wordPressPost.title" class="text-center"/>
 
     <small>{{ postDate }}</small>
 
     <div class="row px-3">
-      <div v-if="$page.wordPressPost.categories.length" class="mr-auto">
+      <div v-if="$page.wordPressPost.categories.length">
         <ul class="list">
-          <li v-for="category in $page.wordPressPost.categories" :key="category.id" >
-            <g-link :to="category.path">{{ category.title }}</g-link>
+          <li v-for="category in $page.wordPressPost.categories" :key="category.id">
+            <g-link :to="category.path"><span class="badge badge-warning">{{ category.title }}</span></g-link>
           </li>
         </ul>
       </div>
 
-      <div v-if="$page.wordPressPost.tags.length" class="ml-auto">
+      <div v-if="$page.wordPressPost.tags.length">
         <ul class="list">
-          <li v-for="tag in $page.wordPressPost.tags" :key="tag.id" >
-            <g-link :to="tag.path">{{ tag.title }}</g-link>
+          <li v-for="tag in $page.wordPressPost.tags" :key="tag.id">
+            <g-link :to="tag.path"><span class="badge badge-primary">{{ tag.title }}</span></g-link>
           </li>
         </ul>
       </div>
     </div>
 
-    <img
-      v-if="$page.wordPressPost.featuredMedia"
-      :src="$page.wordPressPost.featuredMedia.sourceUrl"
-      :width="$page.wordPressPost.featuredMedia.mediaDetails.width"
-      :alt="$page.wordPressPost.featuredMedia.altText"
-    />
     <div v-html="$page.wordPressPost.content"/>
 
     <div v-if="comments.length">
