@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid wraper">
-    <div class="col-xl-6 col-12 mx-auto">
+    <div class="col-xl-6 col-lg-9 col-12 mx-auto">
       <header class="header">
         <nav class="nav mt-3 ml-auto">
           <g-link class="nav__link" to="/contact/">Επικοινωνία</g-link>
