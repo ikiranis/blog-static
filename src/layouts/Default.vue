@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid wraper">
     <div class="col-xl-6 col-12 mx-auto">
       <header class="header">
         <nav class="nav mt-3 ml-auto">
@@ -20,7 +20,7 @@
 
 <style>
 
-  body, html {
+  .wraper {
     font-family: "Comfortaa", cursive;
     font-size: 20px;
   }

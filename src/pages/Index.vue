@@ -44,11 +44,3 @@ export default {
 }
 </script>
 
-<style>
-
-  body, html {
-    font-family: "Comfortaa", cursive;
-    font-size: 20px;
-  }
-
-</style>
