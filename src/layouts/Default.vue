@@ -19,8 +19,9 @@
 </template>
 
 <style>
+
   body, html {
-    font-family: Roboto,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    font-family: "Comfortaa", cursive;
     font-size: 20px;
   }
 
