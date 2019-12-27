@@ -15,6 +15,13 @@ module.exports = {
         baseUrl: process.env.GRIDSOME_WORDPRESSURL, // required
         typeName: 'WordPress', // GraphQL schema name (Optional)
       }
+    },
+
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-487374-1'
+      }
     }
   ]
 }
