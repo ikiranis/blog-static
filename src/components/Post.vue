@@ -10,12 +10,12 @@
 
     <div v-html="post.content" />
 
-    <Adsense
-            class="mb-5 mt-5"
-            ad-client="ca-pub-4611864067867074"
-            ad-slot="1607422473"
-            ad-style="display:block !important;"
-            ad-format="auto" />
+    <Adsense  class="mb-5 mt-5"
+              ad-client="ca-pub-4611864067867074"
+              ad-slot="3220919277"
+              ad-style="display:block"
+              ad-format="auto"
+              data_full_width_responsive="true" />
 
   </div>
 </template>
@@ -26,6 +26,7 @@ import moment from "moment"
 import Adsense from '@/components/Adsense.vue'
 
 export default {
+  components: { Adsense },
   props: {
     post: {
       type: Object,

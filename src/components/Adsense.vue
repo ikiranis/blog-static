@@ -1,9 +1,10 @@
 <template>
-    <ins class="adsbygoogle"
+    <ins :class="adsbygoogle"
+         :style="adStyle"
          :data-ad-client="adClient"
          :data-ad-slot="adSlot"
          :data-ad-format="adFormat"
-         :style="adStyle" />
+         :data-full-width-responsive="data_full_width_responsive" />
 </template>
 
 <script>
@@ -26,10 +27,15 @@
 				type: String,
 				required: false,
 				default: 'display: block'
+			},
+			data_full_width_responsive: {
+				type: String,
+				required: false,
+				default: 'true'
 			}
 		},
 		mounted() {
-			(window.adsbygoogle = window.adsbygoogle || []).push({})
+			(adsbygoogle = window.adsbygoogle || []).push({});
 		}
 	}
 </script>

@@ -16,7 +16,7 @@ export default function (Vue, { head }) {
   head.script.push(
       {
         type: 'text/javascript',
-        src: 'https//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.j',
         async: true
       }
   )

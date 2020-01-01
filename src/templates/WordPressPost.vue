@@ -26,6 +26,13 @@
 
     <div v-html="$page.wordPressPost.content"/>
 
+    <Adsense  class="mb-5 mt-5"
+              ad-client="ca-pub-4611864067867074"
+              ad-slot="3220919277"
+              ad-style="display:block"
+              ad-format="auto"
+              data_full_width_responsive="true" />
+
     <div v-if="comments.length">
       <h4>Comments</h4>
 
@@ -70,10 +77,13 @@ query WordPressPost ($id: ID!) {
 
 <script>
 
+  import Adsense from '@/components/Adsense.vue'
   import axios from 'axios'
   import moment from 'moment'
 
 export default {
+  components: { Adsense },
+
   metaInfo () {
     return {
       title: this.$page.wordPressPost.title
