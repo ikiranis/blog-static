@@ -4,7 +4,8 @@
          :data-ad-client="adClient"
          :data-ad-slot="adSlot"
          :data-ad-format="adFormat"
-         :data-full-width-responsive="data_full_width_responsive" />
+         :data-full-width-responsive="data_full_width_responsive" >
+    </ins>
 </template>
 
 <script>

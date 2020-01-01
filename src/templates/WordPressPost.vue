@@ -31,7 +31,8 @@
               ad-slot="3220919277"
               ad-style="display:block !important"
               ad-format="auto"
-              data_full_width_responsive="true" />
+              data_full_width_responsive="true">
+    </Adsense>
 
     <div v-if="comments.length">
       <h4>Comments</h4>
