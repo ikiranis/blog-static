@@ -10,10 +10,10 @@
 
     <div v-html="post.content" />
 
-    <Adsense  class="mb-5 mt-5"
+    <Adsense  class="mb-3 mt-3"
               ad-client="ca-pub-4611864067867074"
               ad-slot="3220919277"
-              ad-style="display:block"
+              ad-style="display:block !important"
               ad-format="auto"
               data_full_width_responsive="true" />
 

@@ -26,7 +26,7 @@
 
     <div v-html="$page.wordPressPost.content"/>
 
-    <Adsense  class="mb-5 mt-5"
+    <Adsense  class="mt-3"
               ad-client="ca-pub-4611864067867074"
               ad-slot="3220919277"
               ad-style="display:block !important"
