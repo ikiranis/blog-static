@@ -29,7 +29,7 @@
     <Adsense  class="mt-3"
               ad-client="ca-pub-4611864067867074"
               ad-slot="3220919277"
-              ad-style="display:block !important"
+              ad-style="display:block"
               ad-format="auto"
               data_full_width_responsive="true">
     </Adsense>
