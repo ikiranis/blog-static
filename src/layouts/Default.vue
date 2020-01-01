@@ -26,7 +26,7 @@
   }
 
   img {
-    max-width: 100%;
+    width: 100%;
   }
 
   nav[role="navigation"] {
@@ -52,4 +52,5 @@
   .post-list li {
     padding: 1em 0;
   }
+
 </style>
