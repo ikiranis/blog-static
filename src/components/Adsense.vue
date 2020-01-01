@@ -1,5 +1,5 @@
 <template>
-    <ins class="adsbygoogle"
+    <ins :class="adsbygoogle"
          :style="adStyle"
          :data-ad-client="adClient"
          :data-ad-slot="adSlot"
@@ -35,7 +35,7 @@
 			}
 		},
 		mounted() {
-			(window.adsbygoogle = window.adsbygoogle || []).push({});
+			(adsbygoogle = adsbygoogle || []).push({});
 		}
 	}
 </script>
