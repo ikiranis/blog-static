@@ -1,6 +1,6 @@
 <template>
-    <div class="container-fluid row bg-dark text-light py-3">
-        <div class="col-lg-6 col-12">
+    <div class="row bg-dark text-light py-3">
+        <div class="col-12">
             <div>
                 <font-awesome-icon :icon="['fa', 'envelope-open']" />
                 rocean (at) error.gr</div>
@@ -14,9 +14,6 @@
             </div>
         </div>
 
-        <div class="col-lg-6 col-12">
-
-        </div>
     </div>
 
 </template>
