@@ -1,13 +1,13 @@
 <template>
   <div class="container-fluid wraper">
     <div class="col-xl-6 col-lg-9 col-12 mx-auto">
-      <header class="header">
-        <nav class="nav mt-3 ml-auto">
-          <g-link class="nav__link" to="/contact/">Επικοινωνία</g-link>
-        </nav>
-      </header>
+<!--      <header class="header">-->
+<!--        <nav class="nav mt-3 ml-auto">-->
+<!--          <g-link class="nav__link" to="/contact/">Επικοινωνία</g-link>-->
+<!--        </nav>-->
+<!--      </header>-->
 
-      <div class="row mb-3">
+      <div class="row mb-3 mt-5">
         <g-link to="/" class="mx-auto">
           <img src="../images/error_logo.jpg" alt="logo">
         </g-link>
