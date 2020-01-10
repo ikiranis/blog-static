@@ -32,9 +32,14 @@
   nav[role="navigation"] {
     text-align: center;
   }
+
   nav[role="navigation"] a {
     display: inline-block;
     margin: 1.0em 0.75em 2.0em;
+  }
+
+  iframe {
+    width: 100%;
   }
 
   .header {
