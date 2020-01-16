@@ -30,7 +30,7 @@ export default function (Vue, { head }) {
     head.link.push({
         rel: 'alternate',
         type: 'application/rss+xml',
-        title: 'Ροή RSS &raquo; # error ? {gr}',
+        title: 'Ροή RSS # error ? {gr}',
         href: 'https://error.gr/rss.xml'
     })
 
