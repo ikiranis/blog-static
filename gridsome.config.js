@@ -9,6 +9,8 @@ module.exports = {
   },
 
   plugins: [
+
+    // Wordpress parser
     {
       use: '@gridsome/source-wordpress',
       options: {
@@ -17,10 +19,34 @@ module.exports = {
       }
     },
 
+    // Google Analytics
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'UA-487374-1'
+      }
+    },
+
+    // RSS Feed generator
+    {
+      use: 'gridsome-plugin-rss',
+      options: {
+        contentTypeName: 'WordPressPost',
+        feedOptions: {
+          title: 'error.gr',
+          feed_url: 'https://error.gr/rss.xml',
+          site_url: 'https://error.gr'
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          description: node.content,
+          url: 'https://error.gr' + node.path,
+          author: 'rocean'
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml'
+        }
       }
     }
   ]
