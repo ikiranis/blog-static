@@ -12,6 +12,10 @@
                 <font-awesome-icon :icon="['fab', 'facebook']" />
                 <a href="https://www.facebook.com/error.gr"> error.gr</a>
             </div>
+            <div>
+                <font-awesome-icon :icon="['fa', 'rss']" />
+                <a href="https://error.gr/rss.xml"> feed</a>
+            </div>
         </div>
 
     </div>

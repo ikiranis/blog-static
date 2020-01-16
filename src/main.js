@@ -15,6 +15,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 // import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelopeOpen } from '@fortawesome/free-solid-svg-icons'
+import { faRss } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -45,6 +46,7 @@ export default function (Vue, { head }) {
     library.add(faTwitter)
     library.add(faFacebook)
     library.add(faEnvelopeOpen)
+    library.add(faRss)
 
     Vue.component('font-awesome-icon', FontAwesomeIcon)
 
