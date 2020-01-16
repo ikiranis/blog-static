@@ -27,6 +27,13 @@ export default function (Vue, { head }) {
     href: 'https://fonts.googleapis.com/css?family=Comfortaa'
   })
 
+    head.link.push({
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: 'Ροή RSS &raquo; # error ? {gr}',
+        href: 'https://error.gr/rss.xml'
+    })
+
   head.script.push(
       {
         type: 'text/javascript',
