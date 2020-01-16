@@ -39,9 +39,10 @@ module.exports = {
         },
         feedItemOptions: node => ({
           title: node.title,
-          description: node.excerpt,
+          description: node.content,
           url: 'https://error.gr' + node.path,
-          author: 'rocean'
+          author: 'rocean',
+          date: node.date
         }),
         output: {
           dir: './static',
