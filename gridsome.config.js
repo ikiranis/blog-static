@@ -39,7 +39,7 @@ module.exports = {
         },
         feedItemOptions: node => ({
           title: node.title,
-          description: node.content,
+          description: node.description,
           url: 'https://error.gr' + node.path,
           author: 'rocean'
         }),
