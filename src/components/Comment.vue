@@ -54,6 +54,8 @@
         },
 
         methods: {
+    		//TODO check this https://wordpress.stackexchange.com/questions/333728/how-to-authenticate-wp-rest-api-with-jwt-authentication-using-fetch-api
+
     		sendComment() {
 
     			let args = {
