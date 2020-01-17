@@ -34,11 +34,9 @@
               data_full_width_responsive="true">
     </Adsense>
 
-    <comment />
+<!--    <comment />-->
 
-    <div v-if="comments.length">
-      <comments :comments="comments" />
-    </div>
+    <comments  />
 
   </Layout>
 </template>
@@ -88,33 +86,9 @@ export default {
     }
   },
 
-  data() {
-    return {
-      comments: []
-    }
-  },
-
   computed: {
     postDate() {
       return moment(this.$page.wordPressPost.date).format('DD/MM/YYYY')
-    }
-  },
-
-  mounted() {
-    this.getComments()
-  },
-
-  methods: {
-    getComments() {
-      axios.get(process.env.GRIDSOME_WORDPRESSURL + '/wp-json/wp/v2/comments?post='
-              + this.$page.wordPressPost.id
-              + '&orderby=date&order=asc')
-          .then((res) => {
-            this.comments = res.data
-          })
-          .catch((err) => {
-            console.log(err);
-          })
     }
   }
 }
