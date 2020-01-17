@@ -35,14 +35,7 @@
     </Adsense>
 
     <div v-if="comments.length">
-      <h4>Comments</h4>
-
-      <ul class="list mx-5">
-        <li v-for="comment in this.comments" :key="comment.id" >
-          <h5>{{ comment.author_name }}</h5>
-          <div v-html="comment.content.rendered"/>
-        </li>
-      </ul>
+      <comments :comments="comments" />
     </div>
 
   </Layout>
@@ -81,9 +74,10 @@ query WordPressPost ($id: ID!) {
   import Adsense from '@/components/Adsense.vue'
   import axios from 'axios'
   import moment from 'moment'
+  import Comments from '@/components/Comments.vue'
 
 export default {
-  components: { Adsense },
+  components: { Adsense, Comments },
 
   metaInfo () {
     return {
