@@ -34,6 +34,8 @@
               data_full_width_responsive="true">
     </Adsense>
 
+    <comment />
+
     <div v-if="comments.length">
       <comments :comments="comments" />
     </div>
@@ -75,9 +77,10 @@ query WordPressPost ($id: ID!) {
   import axios from 'axios'
   import moment from 'moment'
   import Comments from '@/components/Comments.vue'
+  import Comment from '@/components/Comment.vue'
 
 export default {
-  components: { Adsense, Comments },
+  components: { Adsense, Comments, Comment },
 
   metaInfo () {
     return {
