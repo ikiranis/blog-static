@@ -1,5 +1,5 @@
 {
-  "name": "error.gr-static",
+  "name": "blog-static",
   "private": true,
   "scripts": {
     "build": "gridsome build",
