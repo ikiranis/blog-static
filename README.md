@@ -41,7 +41,7 @@ This starter includes basic templates for categories, tags and posts.
 
 ## Install JWT authentication on wordpress
 
-Wordpress JWT plugin
+Install Wordpress JWT plugin
 
 <https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/>
 
