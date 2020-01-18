@@ -3,7 +3,8 @@
         <div class="col-12">
             <div>
                 <font-awesome-icon :icon="['fa', 'envelope-open']" />
-                {{ email }}</div>
+                {{ email }}
+            </div>
             <div>
                 <font-awesome-icon :icon="['fab', 'twitter']" />
                 <a :href="twitterUrl"> {{ twitterName }}</a>
