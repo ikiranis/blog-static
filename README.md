@@ -45,7 +45,7 @@ Install Wordpress JWT plugin
 
 <https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/>
 
-Add to .htaccess (outside IfModule)
+Add to .htaccess (outside IfModule) 
 
 ```
 ## For JWT authentication

@@ -34,8 +34,8 @@ export default function (Vue, { head }) {
     head.link.push({
         rel: 'alternate',
         type: 'application/rss+xml',
-        title: 'Ροή RSS # error ? {gr}',
-        href: 'https://error.gr/rss.xml'
+        title: process.env.GRIDSOME_SITE_NAME,
+        href: process.env.GRIDSOME_SITE_URL+ '/rss.xml'
     })
 
   head.script.push(

@@ -83,9 +83,9 @@
 					body: JSON.stringify( {
 						// Username of a user on the WordPress website in which the REST API request
 						// is being made to.
-						username: process.env.GRIDSOME_wp_username,
+						username: process.env.GRIDSOME_WP_USERNAME,
 						// And the above user's password.
-						password: process.env.GRIDSOME_wp_password
+						password: process.env.GRIDSOME_WP_PASSWORD
 					} ),
 					headers: {
 						'Content-Type': 'application/json'

@@ -1,6 +1,6 @@
 module.exports = {
-  siteName: 'error.gr',
-  siteDescription: 'Μια άλλη ματιά στην τεχνολογία (και όχι μόνο)',
+  siteName: process.env.GRIDSOME_SITE_NAME,
+  siteDescription: process.env.GRIDSOME_SITE_DESCRIPTION,
 
   templates: {
     WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
@@ -23,7 +23,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: 'UA-487374-1'
+        id: process.env.GRIDSOME_GOOGLE_ANALYTICS_ID
       }
     },
 
@@ -33,15 +33,15 @@ module.exports = {
       options: {
         contentTypeName: 'WordPressPost',
         feedOptions: {
-          title: 'error.gr',
-          feed_url: 'https://error.gr/rss.xml',
-          site_url: 'https://error.gr'
+          title: process.env.GRIDSOME_SITE_NAME,
+          feed_url: process.env.GRIDSOME_SITE_URL + '/rss.xml',
+          site_url: process.env.GRIDSOME_SITE_URL
         },
         feedItemOptions: node => ({
           title: node.title,
           description: node.content,
-          url: 'https://error.gr' + node.path,
-          author: 'rocean',
+          url: process.env.GRIDSOME_SITE_URL + node.path,
+          author: process.env.GRIDSOME_SITE_NAME,
           date: node.date
         }),
         output: {
