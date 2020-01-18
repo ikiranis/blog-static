@@ -104,6 +104,8 @@
 					.then((res) => {
 						this.response.message = 'Το σχόλιο σου θα εμφανιστεί μόλις το εγκρίνει ο διαχειριστής'
 						this.response.status = true
+
+                        this.comment = {}
 					})
 					.catch(err => {
 						this.response.message = err.response.data.message
