@@ -34,7 +34,7 @@
               data_full_width_responsive="true">
     </Adsense>
 
-<!--    <comment />-->
+    <comment />
 
     <comments  />
 

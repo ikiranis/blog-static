@@ -37,3 +37,25 @@ See all [options](https://gridsome.org/plugins/@gridsome/source-wordpress).
 ## Included templates
 
 This starter includes basic templates for categories, tags and posts.
+
+
+## Install JWT authentication on wordpress
+
+Wordpress JWT plugin
+
+<https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/>
+
+Add to .htaccess
+
+```
+RewriteEngine on
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+```
+
+Add to wp-config
+```
+define('JWT_AUTH_SECRET_KEY', 'your-top-secret-key');
+```
+
+You can take a key from <https://api.wordpress.org/secret-key/1.1/salt/>

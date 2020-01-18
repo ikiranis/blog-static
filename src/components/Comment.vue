@@ -49,7 +49,9 @@
     				name: '',
                     email: '',
                     text: ''
-                }
+                },
+
+                token: ''
             }
         },
 
@@ -57,6 +59,28 @@
     		//TODO check this https://wordpress.stackexchange.com/questions/333728/how-to-authenticate-wp-rest-api-with-jwt-authentication-using-fetch-api
 
     		sendComment() {
+
+				fetch( process.env.GRIDSOME_WORDPRESSURL + '/wp-json/jwt-auth/v1/token', {
+					method: 'POST',
+					body: JSON.stringify( {
+						// Username of a user on the WordPress website in which the REST API request
+						// is being made to.
+						username: process.env.GRIDSOME_wp_username,
+						// And the above user's password.
+						password: process.env.GRIDSOME_wp_password
+					} ),
+					headers: {
+						'Content-Type': 'application/json'
+					}
+				} )
+                    .then( res => res.json() )
+					.then( res => {
+						this.token = res.token
+						console.log( res )
+					} )
+					.catch((err) => {
+						console.log(err);
+					})
 
     			let args = {
     				post: this.$page.wordPressPost.id,
