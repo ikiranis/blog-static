@@ -59,3 +59,5 @@ define('JWT_AUTH_SECRET_KEY', 'your-top-secret-key');
 ```
 
 You can take a key from <https://api.wordpress.org/secret-key/1.1/salt/>
+
+**If you want anything in root directory (e.g. ads.txt file) create it in /static folder**
