@@ -36,13 +36,22 @@
             </div>
 
         </form>
+
+        <div class="row fixed-bottom mb-2">
+            <display-error class="mx-auto"
+                           v-if="response.message"
+                           :response="response"/>
+        </div>
     </div>
 </template>
 
 <script>
-    import axios from "axios";
+    import axios from "axios"
+	import DisplayError from '@/components/DisplayError'
 
 	export default {
+		components: { DisplayError },
+
     	data() {
     		return {
     			comment: {
@@ -51,16 +60,25 @@
                     text: ''
                 },
 
-                token: ''
+				response: {
+					message: ' ',
+					status: '',
+					errors: []
+				}
             }
         },
 
         methods: {
-    		//TODO check this https://wordpress.stackexchange.com/questions/333728/how-to-authenticate-wp-rest-api-with-jwt-authentication-using-fetch-api
+    		async sendComment() {
 
-    		sendComment() {
+				let args = {
+					post: this.$page.wordPressPost.id,
+					author_name: this.comment.name,
+					author_email: this.comment.email,
+					content: this.comment.text
+				}
 
-				fetch( process.env.GRIDSOME_WORDPRESSURL + '/wp-json/jwt-auth/v1/token', {
+				await fetch( process.env.GRIDSOME_WORDPRESSURL + '/wp-json/jwt-auth/v1/token', {
 					method: 'POST',
 					body: JSON.stringify( {
 						// Username of a user on the WordPress website in which the REST API request
@@ -75,27 +93,23 @@
 				} )
                     .then( res => res.json() )
 					.then( res => {
-						this.token = res.token
-						console.log( res )
+						axios.defaults.headers.common['Accept'] = 'application/json'
+						axios.defaults.headers.common['Authorization'] = 'Bearer ' + res.token
 					} )
 					.catch((err) => {
 						console.log(err);
 					})
 
-    			let args = {
-    				post: this.$page.wordPressPost.id,
-                    author: 1,
-					author_name: this.comment.name,
-					author_email: this.comment.email,
-					content: this.comment.text
-                }
-
-				axios.post(process.env.GRIDSOME_WORDPRESSURL + '/wp-json/wp/v2/comments/', args)
+    			await axios.post(process.env.GRIDSOME_WORDPRESSURL + '/wp-json/wp/v2/comments/', args)
 					.then((res) => {
-						alert('comment posted')
+						this.response.message = 'Το σχόλιο σου θα εμφανιστεί μόλις το εγκρίνει ο διαχειριστής'
+						this.response.status = true
 					})
-					.catch((err) => {
-						console.log(err);
+					.catch(err => {
+						this.response.message = err.response.data.message
+						this.response.status = false
+
+                        console.log(err.response)
 					})
             }
         }

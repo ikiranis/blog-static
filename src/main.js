@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 
+
 // fontawesome
 // Install
 // $ npm i --save @fortawesome/fontawesome-svg-core
@@ -22,6 +23,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 export default function (Vue, { head }) {
   Vue.component('Layout', DefaultLayout)
+
+    Vue.use(BootstrapVue)
 
   head.link.push({
     rel: 'stylesheet',

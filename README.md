@@ -45,15 +45,15 @@ Install Wordpress JWT plugin
 
 <https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/>
 
-Add to .htaccess
+Add to .htaccess (outside IfModule)
 
 ```
-RewriteEngine on
-RewriteCond %{HTTP:Authorization} ^(.*)
-RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+## For JWT authentication
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 ```
 
-Add to wp-config
+Add to wp-config, before ``define('WP_DEBUG', false);``
+
 ```
 define('JWT_AUTH_SECRET_KEY', 'your-top-secret-key');
 ```
