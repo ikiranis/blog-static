@@ -7,11 +7,18 @@
 <!--        </nav>-->
 <!--      </header>-->
 
+
       <div class="row mb-3 mt-5">
         <g-link to="/" class="mx-auto">
           <img src="../images/error_logo.jpg" alt="logo">
         </g-link>
       </div>
+
+        <div class="row mt-3 mb-3">
+            <div class="col-lg-6 col-12 mx-auto">
+                <search />
+            </div>
+        </div>
 
       <slot />
 
@@ -66,10 +73,11 @@
 
 <script>
 import Footer from '~/components/Footer.vue'
+import Search from '~/components/Search.vue'
 
 export default {
   components: {
-    Footer
+    Footer, Search
   }
 }
 </script>
