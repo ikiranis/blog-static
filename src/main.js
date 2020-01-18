@@ -49,7 +49,7 @@ export default function (Vue, { head }) {
     head.script.push(
         {
             type: 'text/javascript',
-            src: 'https://cse.google.com/cse.js?cx=partner-pub-4611864067867074:osoaty-c2jk',
+            src: process.env.GRIDSOME_GOOGLE_SEARCH_URL,
             async: true
         }
     )
