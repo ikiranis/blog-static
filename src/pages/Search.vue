@@ -1,3 +1,5 @@
 <template>
-    <div class="gcse-searchresults-only"></div>
+    <Layout>
+        <div class="gcse-searchresults-only"></div>
+    </Layout>
 </template>
