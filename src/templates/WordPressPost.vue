@@ -82,12 +82,12 @@ export default {
         { name: 'twitter:site', content: '@' + process.env.GRIDSOME_TWITTER_NAME },
         { name: 'twitter:title', content: this.$page.wordPressPost.title },
         { name: 'twitter:description', content: this.description },
-        { name: 'twitter:image:src', content: '' },
+        { name: 'twitter:image:src', content: this.postImage },
 
         { property: "og:title", content: this.$page.wordPressPost.title },
         { property: "og:type", content: 'article' },
         { property: "og:url", content: process.env.GRIDSOME_SITE_URL + this.$page.wordPressPost.path },
-        { property: "og:image", content: '' },
+        { property: "og:image", content: this.postImage },
         { property: "og:description", content: this.description },
         { property: "og:site_name", content: process.env.GRIDSOME_SITE_NAME },
         { property: "article:published_time", content: this.$page.wordPressPost.date },
@@ -125,6 +125,13 @@ export default {
       })
 
       return tags
+    },
+
+    postImage() {
+      let wraper = document.createElement('div')
+      wraper.innerHTML = this.$page.wordPressPost.content
+
+      return wraper.querySelectorAll('img')
     }
   }
 
