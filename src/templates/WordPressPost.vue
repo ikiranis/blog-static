@@ -78,7 +78,7 @@ export default {
       meta: [
         { name: 'description', content: this.description },
 
-        { name: 'twitter:card', content: this.description },
+        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@' + process.env.GRIDSOME_TWITTER_NAME },
         { name: 'twitter:title', content: this.$page.wordPressPost.title },
         { name: 'twitter:description', content: this.description },
