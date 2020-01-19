@@ -126,10 +126,6 @@ export default {
 
       return tags
     }
-  },
-
-  mounted() {
-    console.log(this.$page.wordPressPost)
   }
 
 }
