@@ -26,14 +26,6 @@
 
     <div v-html="$page.wordPressPost.content"/>
 
-    <Adsense  class="mt-3"
-              ad-client="ca-pub-4611864067867074"
-              ad-slot="3220919277"
-              ad-style="display:block"
-              ad-format="auto"
-              data_full_width_responsive="true">
-    </Adsense>
-
     <comment />
 
     <comments  />
@@ -71,14 +63,12 @@ query WordPressPost ($id: ID!) {
 
 <script>
 
-  import Adsense from '@/components/Adsense.vue'
-  import axios from 'axios'
   import moment from 'moment'
   import Comments from '@/components/Comments.vue'
   import Comment from '@/components/Comment.vue'
 
 export default {
-  components: { Adsense, Comments, Comment },
+  components: { Comments, Comment },
 
   metaInfo () {
     return {
