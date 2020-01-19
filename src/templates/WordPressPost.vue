@@ -109,7 +109,7 @@ export default {
         { property: "og:url", content: this.$page.wordPressPost.path },
         { property: "og:image", content: '' },
         { property: "og:description", content: this.$page.wordPressPost.excerpt },
-        { property: "og:site_name", content: 'process.env.GRIDSOME_SITE_NAME' },
+        { property: "og:site_name", content: process.env.GRIDSOME_SITE_NAME },
       ]
     }
   },
