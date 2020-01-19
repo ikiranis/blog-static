@@ -23,7 +23,8 @@
                 <div class="form-group row">
                     <div class="col-12">
                             <textarea id="commentText" class="form-control"
-                                      v-model="comment.text" rows="5" cols="50" required placeholder="text"> </textarea>
+                                      v-model="comment.text" rows="5" cols="50"
+                                      required placeholder="text"> </textarea>
                     </div>
                 </div>
 
@@ -42,6 +43,7 @@
                            v-if="response.message"
                            :response="response"/>
         </div>
+
     </div>
 </template>
 
@@ -104,7 +106,7 @@
 
     			await axios.post(process.env.GRIDSOME_WORDPRESSURL + '/wp-json/wp/v2/comments/', args)
 					.then((res) => {
-						this.response.message = 'Your comment will be posted soon'
+						this.response.message = 'Thank you! Your comment will be posted soon'
 						this.response.status = true
 
                         this.displayComment = false
