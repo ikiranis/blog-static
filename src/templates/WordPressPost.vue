@@ -128,12 +128,12 @@ export default {
     },
 
     postImage() {
-      let wraper = document.createElement('div')
-      wraper.innerHTML = this.$page.wordPressPost.content
-
-      if (wraper.querySelectorAll('img').length) {
-        return wraper.querySelectorAll('img')[0]
-      }
+      // let wraper = document.createElement('div')
+      // wraper.innerHTML = this.$page.wordPressPost.content
+      //
+      // if (wraper.querySelectorAll('img').length) {
+      //   return wraper.querySelectorAll('img')[0]
+      // }
 
       return ''
 
