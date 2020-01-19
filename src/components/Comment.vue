@@ -1,38 +1,41 @@
 <template>
     <div>
-        <div class="row">
-            <h3 class="mx-auto">Write your comment</h3>
-        </div>
-        <form @submit.prevent>
-
-            <div class="form-group row">
-                <div class="col-12">
-                    <input id="name" type="text" class="form-control"
-                           v-model="comment.name" required placeholder="name">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <div class="col-12">
-                    <input id="email" type="email" class="form-control"
-                           v-model="comment.email" required placeholder="enail">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <div class="col-12">
-                        <textarea id="commentText" class="form-control"
-                                  v-model="comment.text" rows="5" cols="50" required placeholder="text"> </textarea>
-                </div>
-            </div>
-
+        <div v-if="displayComment">
             <div class="row">
-                <input type="button" id="sendComment"
-                       class="btn btn-success col-md-6 col-12 my-3 mx-auto"
-                       @click="sendComment" value="Send">
+                <h3 class="mx-auto">Write your comment</h3>
             </div>
+            <form @submit.prevent>
 
-        </form>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input id="name" type="text" class="form-control"
+                               v-model="comment.name" required placeholder="name">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input id="email" type="email" class="form-control"
+                               v-model="comment.email" required placeholder="enail">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12">
+                            <textarea id="commentText" class="form-control"
+                                      v-model="comment.text" rows="5" cols="50" required placeholder="text"> </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="button" id="sendComment"
+                           class="btn btn-success col-md-6 col-12 my-3 mx-auto"
+                           @click="sendComment" value="Send">
+                </div>
+
+            </form>
+
+        </div>
 
         <div class="row fixed-bottom mb-2">
             <display-error class="mx-auto"
@@ -61,7 +64,9 @@
 					message: ' ',
 					status: '',
 					errors: []
-				}
+				},
+
+                displayComment: true,
             }
         },
 
@@ -102,7 +107,7 @@
 						this.response.message = 'Your comment will be posted soon'
 						this.response.status = true
 
-                        this.comment = {}
+                        this.displayComment = false
 					})
 					.catch(err => {
 						this.response.message = err.response.data.message
