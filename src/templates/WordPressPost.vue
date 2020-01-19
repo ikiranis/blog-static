@@ -39,7 +39,9 @@ query WordPressPost ($id: ID!) {
     id
     title
     content
+    excerpt
     date
+    path
     featuredMedia {
       sourceUrl
       altText
@@ -70,9 +72,45 @@ query WordPressPost ($id: ID!) {
 export default {
   components: { Comments, Comment },
 
+// <meta name="description" content="Page description. No longer than 155 characters." />
+//
+//           <!-- Twitter Card data -->
+//           <meta name="twitter:card" content="summary">
+//           <meta name="twitter:site" content="@publisher_handle">
+//           <meta name="twitter:title" content="Page Title">
+//           <meta name="twitter:description" content="Page description less than 200 characters">
+//           <meta name="twitter:creator" content="@author_handle">
+//           <-- Twitter Summary card images must be at least 120x120px -->
+//   <meta name="twitter:image" content="http://www.example.com/image.jpg">
+//
+//           <!-- Open Graph data -->
+//           <meta property="og:title" content="Title Here" />
+//           <meta property="og:type" content="article" />
+//           <meta property="og:url" content="http://www.example.com/" />
+//           <meta property="og:image" content="http://example.com/image.jpg" />
+//           <meta property="og:description" content="Description Here" />
+//           <meta property="og:site_name" content="Site Name, i.e. Moz" />
+//           <meta property="fb:admins" content="Facebook numeric ID" />
+//
   metaInfo () {
     return {
-      title: this.$page.wordPressPost.title
+      title: this.$page.wordPressPost.title,
+      meta: [
+        { name: 'description', content: this.$page.wordPressPost.excerpt },
+
+        { name: 'twitter:card', content: this.$page.wordPressPost.excerpt },
+        { name: 'twitter:site', content: '@' + process.env.GRIDSOME_TWITTER_NAME },
+        { name: 'twitter:title', content: this.$page.wordPressPost.title },
+        { name: 'twitter:description', content: this.$page.wordPressPost.excerpt },
+        { name: 'twitter:image', content: '' },
+
+        { property: "og:title", content: this.$page.wordPressPost.title },
+        { property: "og:type", content: 'article' },
+        { property: "og:url", content: this.$page.wordPressPost.path },
+        { property: "og:image", content: '' },
+        { property: "og:description", content: this.$page.wordPressPost.excerpt },
+        { property: "og:site_name", content: 'process.env.GRIDSOME_SITE_NAME' },
+      ],
     }
   },
 
