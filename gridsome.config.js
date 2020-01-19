@@ -1,6 +1,7 @@
 module.exports = {
   siteName: process.env.GRIDSOME_SITE_NAME,
   siteDescription: process.env.GRIDSOME_SITE_DESCRIPTION,
+  siteUrl: process.env.GRIDSOME_SITE_URL,
 
   templates: {
     WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
@@ -49,6 +50,22 @@ module.exports = {
           name: 'rss.xml'
         }
       }
+    },
+
+    // Sitemap plugin
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        exclude: ['/exclude-me'],
+        config: {
+          '/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          }
+        }
+      }
     }
+
   ]
 }
