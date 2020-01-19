@@ -6,26 +6,23 @@
         <form @submit.prevent>
 
             <div class="form-group row">
-                <label for="name" class="col-md-4 col-form-label text-md-right">Όνομα</label>
-                <div class="col-md-8">
+                <div class="col-12">
                     <input id="name" type="text" class="form-control"
-                           v-model="comment.name" required>
+                           v-model="comment.name" required placeholder="name">
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">email</label>
-                <div class="col-md-8">
+                <div class="col-12">
                     <input id="email" type="email" class="form-control"
-                           v-model="comment.email" required>
+                           v-model="comment.email" required placeholder="enail">
                 </div>
             </div>
 
             <div class="form-group row">
-                <label for="commentText" class="col-md-4 col-form-label text-md-right">Κείμενο</label>
-                <div class="col-md-8">
+                <div class="col-12">
                         <textarea id="commentText" class="form-control"
-                                  v-model="comment.text" rows="5" cols="50" required> </textarea>
+                                  v-model="comment.text" rows="5" cols="50" required placeholder="text"> </textarea>
                 </div>
             </div>
 
