@@ -94,8 +94,6 @@ export default {
         { property: "article:section", content: this.categories },
         { property: "article:tag", content: this.tags }
 
-
-
       ]
     }
   },
@@ -110,23 +108,23 @@ export default {
     },
 
     categories() {
-      let categories = ''
+      let categories = []
 
       this.$page.wordPressPost.categories.forEach((category) => {
-        categories += category.title + ', '
+        categories.push(category.title)
       })
 
-      return categories.substr(0, categories.length - 2);
+      return categories
     },
 
     tags() {
-      let tags = ''
+      let tags = []
 
       this.$page.wordPressPost.tags.forEach((tag) => {
-        tags += tag.title + ', '
+        tags.push(tag.title)
       })
 
-      return tags.substr(0, tags.length - 2);
+      return tags
     }
   },
 
