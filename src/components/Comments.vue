@@ -1,6 +1,6 @@
 <template>
     <div v-if="comments.length">
-        <h4>Σχόλια</h4>
+        <h4>Comments</h4>
 
         <ul class="list mt-3 mx-5">
             <li v-for="comment in this.comments" :key="comment.id" >

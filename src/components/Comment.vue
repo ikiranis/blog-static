@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="row">
-            <h3 class="mx-auto">Γράψε το σχόλιο σου</h3>
+            <h3 class="mx-auto">Write your comment</h3>
         </div>
         <form @submit.prevent>
 
@@ -32,7 +32,7 @@
             <div class="row">
                 <input type="button" id="sendComment"
                        class="btn btn-success col-md-6 col-12 my-3 mx-auto"
-                       @click="sendComment" value="Αποστολή">
+                       @click="sendComment" value="Send">
             </div>
 
         </form>
@@ -102,7 +102,7 @@
 
     			await axios.post(process.env.GRIDSOME_WORDPRESSURL + '/wp-json/wp/v2/comments/', args)
 					.then((res) => {
-						this.response.message = 'Το σχόλιο σου θα εμφανιστεί μόλις το εγκρίνει ο διαχειριστής'
+						this.response.message = 'Your comment will be posted soon'
 						this.response.status = true
 
                         this.comment = {}
