@@ -82,14 +82,20 @@ export default {
         { name: 'twitter:site', content: '@' + process.env.GRIDSOME_TWITTER_NAME },
         { name: 'twitter:title', content: this.$page.wordPressPost.title },
         { name: 'twitter:description', content: this.description },
-        { name: 'twitter:image', content: '' },
+        { name: 'twitter:image:src', content: '' },
 
         { property: "og:title", content: this.$page.wordPressPost.title },
         { property: "og:type", content: 'article' },
-        { property: "og:url", content: this.$page.wordPressPost.path },
+        { property: "og:url", content: process.env.GRIDSOME_SITE_URL + this.$page.wordPressPost.path },
         { property: "og:image", content: '' },
         { property: "og:description", content: this.description },
         { property: "og:site_name", content: process.env.GRIDSOME_SITE_NAME },
+        { property: "article:published_time", content: this.$page.wordPressPost.date },
+        { property: "article:section", content: this.categories },
+        { property: "article:tag", content: this.tags }
+
+
+
       ]
     }
   },
@@ -101,8 +107,33 @@ export default {
 
     description() {
       return this.$page.wordPressPost.excerpt.replace(/<\/?[^>]+>/ig, "");
+    },
+
+    categories() {
+      let categories = ''
+
+      this.$page.wordPressPost.categories.forEach((category) => {
+        categories += category.title + ', '
+      })
+
+      return categories.substr(0, categories.length - 2);
+    },
+
+    tags() {
+      let tags = ''
+
+      this.$page.wordPressPost.tags.forEach((tag) => {
+        tags += tag.title + ', '
+      })
+
+      return tags.substr(0, tags.length - 2);
     }
+  },
+
+  mounted() {
+    console.log(this.$page.wordPressPost)
   }
+
 }
 </script>
 
