@@ -131,7 +131,12 @@ export default {
       let wraper = document.createElement('div')
       wraper.innerHTML = this.$page.wordPressPost.content
 
-      return wraper.querySelectorAll('img')
+      if (wraper.querySelectorAll('img').length) {
+        return wraper.querySelectorAll('img')[0]
+      }
+
+      return ''
+
     }
   }
 
