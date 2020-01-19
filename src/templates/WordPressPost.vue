@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div v-html="$page.wordPressPost.content"/>
+    <div v-html="$page.wordPressPost.content" />
 
     <comment />
 
@@ -82,12 +82,12 @@ export default {
         { name: 'twitter:site', content: '@' + process.env.GRIDSOME_TWITTER_NAME },
         { name: 'twitter:title', content: this.$page.wordPressPost.title },
         { name: 'twitter:description', content: this.description },
-        { name: 'twitter:image:src', content: this.postImage },
+        { name: 'twitter:image:src', content: this.image },
 
         { property: "og:title", content: this.$page.wordPressPost.title },
         { property: "og:type", content: 'article' },
         { property: "og:url", content: process.env.GRIDSOME_SITE_URL + this.$page.wordPressPost.path },
-        { property: "og:image", content: this.postImage },
+        { property: "og:image", content: this.image },
         { property: "og:description", content: this.description },
         { property: "og:site_name", content: process.env.GRIDSOME_SITE_NAME },
         { property: "article:published_time", content: this.$page.wordPressPost.date },
@@ -128,19 +128,16 @@ export default {
     },
 
     postImage() {
-      // let wraper = document.createElement('div')
-      // wraper.innerHTML = this.$page.wordPressPost.content
-      //
-      // if (wraper.querySelectorAll('img').length) {
-      //   return wraper.querySelectorAll('img')[0]
-      // }
+      if (this.$page.wordPressPost.featuredMedia) {
+        return this.$page.wordPressPost.featuredMedia.sourceUrl
+      }
 
       return ''
-
     }
   }
-
 }
+
+
 </script>
 
 <style>
