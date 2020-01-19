@@ -1,6 +1,6 @@
 module.exports = {
   siteName: process.env.GRIDSOME_SITE_NAME,
-  siteDescription: process.env.GRIDSOME_SITE_DESCRIPTION,
+  // siteDescription: process.env.GRIDSOME_SITE_DESCRIPTION,
   siteUrl: process.env.GRIDSOME_SITE_URL,
 
   templates: {
