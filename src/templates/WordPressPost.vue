@@ -76,12 +76,12 @@ export default {
     return {
       title: this.$page.wordPressPost.title,
       meta: [
-        { name: 'description', content: description },
+        { name: 'description', content: this.description },
 
-        { name: 'twitter:card', content: description },
+        { name: 'twitter:card', content: this.description },
         { name: 'twitter:site', content: '@' + process.env.GRIDSOME_TWITTER_NAME },
         { name: 'twitter:title', content: this.$page.wordPressPost.title },
-        { name: 'twitter:description', content: description },
+        { name: 'twitter:description', content: this.description },
         { name: 'twitter:image', content: '' },
 
         { property: "og:title", content: this.$page.wordPressPost.title },
