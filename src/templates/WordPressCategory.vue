@@ -3,7 +3,7 @@
     <h1>Category: {{ $page.wordPressCategory.title }} </h1>
     <ul class="post-list">
       <li v-for="{ node } in $page.wordPressCategory.belongsTo.edges" :key="node.id">
-        <Post :post="node" />
+        <Post :post="node" :category="true" />
       </li>
     </ul>
     <Pager :info="$page.wordPressCategory.belongsTo.pageInfo"/>
@@ -26,6 +26,13 @@ query WordPressCategory ($id: ID!, $page: Int) {
             title
             path
             excerpt
+              featuredMedia {
+                sourceUrl
+                altText
+                mediaDetails {
+                  width
+                }
+              }
         	}
         }
       }

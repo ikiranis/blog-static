@@ -3,7 +3,7 @@
     <h1>Tag: {{ $page.wordPressPostTag.title }} </h1>
     <ul class="post-list">
       <li v-for="{ node } in $page.wordPressPostTag.belongsTo.edges" :key="node.id">
-        <Post :post="node" />
+        <Post :post="node" :category="true" />
       </li>
     </ul>
     <Pager :info="$page.wordPressPostTag.belongsTo.pageInfo"/>
@@ -26,6 +26,13 @@ query WordPressPostTag ($id: ID!, $page: Int) {
             title
             path
             excerpt
+              featuredMedia {
+                sourceUrl
+                altText
+                mediaDetails {
+                  width
+                }
+              }
         	}
         }
       }
