@@ -1,8 +1,8 @@
-# Blog with Vue/Gridsome and Wordpress
+# Static blog page, with Vue/Gridsome and Wordpress
 
-Create a blog, using Vue/Gridsome (for frontend) and Wordress (for backend)
+Create a static blog page, using Vue/Gridsome (for frontend) and Wordress (for backend).
 
-## Used extra gridsome plugins
+### Used extra gridsome plugins
 
 - source-wordpress (Parse wordpress posts)
 <https://gridsome.org/plugins/@gridsome/source-wordpress>
@@ -15,6 +15,8 @@ Create a blog, using Vue/Gridsome (for frontend) and Wordress (for backend)
 
 - plugin-sitemap (Create sitemap file)
 <https://gridsome.org/plugins/@gridsome/plugin-sitemap>
+
+### Extra Vue components were written, for comments, google adsense etc.
 
 ## Setup Wordpress 
 
