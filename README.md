@@ -64,14 +64,11 @@ You can take a key from <https://api.wordpress.org/secret-key/1.1/salt/>
 
 ### Create a user, with editor role, for comments (used for authentication on comments Wordpress API)
 
-## Install
-
-`gridsome create my-gridsome-project wordpress`
-
-## Guide
-
-Add your WordPress URL to the plugin options.
+### Make and empty theme
 
 
 
-**If you want anything in root directory (e.g. ads.txt file) create it in /static folder**
+
+
+
+** If you want anything in root directory (e.g. ads.txt file) create it in /static folder**
