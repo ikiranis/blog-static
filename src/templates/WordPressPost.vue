@@ -160,4 +160,9 @@ export default {
   ul.list li:last-child:after {
     content: '';
   }
+
+  .wp-block-embed__wrapper {
+    text-align: center;
+  }
+
 </style>

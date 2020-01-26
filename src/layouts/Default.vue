@@ -63,10 +63,6 @@
         margin: 1.0em 0.75em 2.0em;
     }
 
-    iframe {
-        width: 100%;
-    }
-
     .header {
         display: flex;
         justify-content: space-between;
