@@ -2,6 +2,10 @@
 
 Create a static blog page, using Vue/Gridsome (for frontend) and Wordress (for backend).
 
+### Demo
+
+<https://error.gr>
+
 ### Used extra gridsome plugins
 
 - source-wordpress (Parse wordpress posts)
