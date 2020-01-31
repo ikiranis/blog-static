@@ -161,8 +161,4 @@ export default {
     content: '';
   }
 
-  .wp-block-embed__wrapper {
-    text-align: center;
-  }
-
 </style>
