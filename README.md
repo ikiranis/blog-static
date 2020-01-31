@@ -50,7 +50,7 @@ SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 
 <https://el.wordpress.org/plugins/autoconvert-greeklish-permalinks/>
 
-- JWT Authentication for WP REST API (Used to post comments, using the Wordpress API)
+- JWT Authentication for WP REST API (Used to post comments with the Wordpress API)
 
 <https://el.wordpress.org/plugins/jwt-authentication-for-wp-rest-api/>
 
