@@ -169,3 +169,5 @@ web space or setup your web server to publish dist folder.
 **If you want anything in root directory (e.g. ads.txt file) create it in /static folder**
 
 **You have to build the site, after any new post in wordpress** 
+
+**Change /src/favicon.png and /src/images/logo.jpg with your images**

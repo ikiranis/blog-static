@@ -4,7 +4,7 @@
 
             <div class="row mb-3 mt-5">
                 <g-link to="/" class="mx-auto">
-                    <img src="../images/error_logo.jpg" alt="logo">
+                    <img src="../images/logo.jpg" alt="logo">
                 </g-link>
             </div>
 
