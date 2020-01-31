@@ -97,7 +97,7 @@ add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );
 /*
 * Theme Name: headless
 * Description: A blank theme
-* Author: Rocean
+* Author: Yiannis Kiranis
 * Theme URI: https://apps4net.eu
 * Author URI: https://apps4net.eu
 * Version: 1.0.0
