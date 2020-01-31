@@ -79,19 +79,27 @@ You need to have npm installed <https://www.npmjs.com/get-npm>
 npm install --global @gridsome/cli
 ```
 
-### Download the code
+### Download the project
 
 ```
-git clone https://github.com/ikiranis/blog-static.git
+git clone https://github.com/ikiranis/blog-static.git .
 ```
 
 (or download the zip <https://github.com/ikiranis/blog-static/archive/master.zip>)
+
+Go to the project's path
+
+### Install depedencies
+
+```
+npm install
+```
 
 ### Edit the .env file with your settings
 
 Copy .env.example to .env
 
-Edit .env file
+Edit .env file with your settings
 
 ### Build the project
 
