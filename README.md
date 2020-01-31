@@ -91,7 +91,7 @@ add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );
 
 (Redirect the user to your new static site)
 
--- Create **/headless/style.css**
+- Create **/headless/style.css**
 
 ```
 /*
