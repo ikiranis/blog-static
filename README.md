@@ -69,8 +69,45 @@ You can take a key from <https://api.wordpress.org/secret-key/1.1/salt/>
 ### Make and empty theme
 
 
+## Setup frontend (Gridsome/Vue)
 
+You need to have npm installed <https://www.npmjs.com/get-npm>
 
+### Install gridsome
 
+```
+npm install --global @gridsome/cli
+```
 
-** If you want anything in root directory (e.g. ads.txt file) create it in /static folder**
+### Download the code
+
+```
+git clone https://github.com/ikiranis/blog-static.git
+```
+
+(or download the zip <https://github.com/ikiranis/blog-static/archive/master.zip>)
+
+### Edit the .env file with your settings
+
+Copy .env.example to .env
+
+Edit .env file
+
+### Build the project
+
+For dev mode run:
+
+```
+gridsome develop
+```
+
+For production run:
+
+```
+gridsome build
+```
+
+Your site will be in the **dist** folder. Copy these files to your
+web space or setup your web server to publish dist folder.
+
+**If you want anything in root directory (e.g. ads.txt file) create it in /static folder**
