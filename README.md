@@ -66,8 +66,52 @@ You can take a key from <https://api.wordpress.org/secret-key/1.1/salt/>
 
 ### Create a user, with editor role, for comments (used for authentication on comments Wordpress API)
 
-### Make and empty theme
+### Make an empty theme and set wordpress to use this
 
+- Create **headless** folder in themes
+- Create **/headless/functions.php** file and add:
+
+```
+<?php
+
+function mytheme_post_thumbnails() {
+    add_theme_support( 'post-thumbnails' );
+}
+
+add_action( 'after_setup_theme', 'mytheme_post_thumbnails' );
+```
+
+- Create **/headless/index.php** file and add:
+
+```
+<script type="text/javascript">
+	window.location = 'https://mySite.com';
+</script>
+```
+
+(Redirect the user to your new static site)
+
+-- Create **/headless/style.css**
+
+```
+/*
+* Theme Name: headless
+* Description: A blank theme
+* Author: Rocean
+* Theme URI: https://apps4net.eu
+* Author URI: https://apps4net.eu
+* Version: 1.0.0
+* Tags: blank
+* License: GNU General Public License v2.0
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+* Browser Compatibility: Latest versions of IE10, Chrome, Opera, Safari, Firefox. IE9 and below are not supported.
+
+* This theme, like WordPress, is licensed under the GPL.
+* Use it to make something cool, have fun, and share what you've learned with others.
+```
+
+(change these with everything you want)
 
 ## Setup frontend (Gridsome/Vue)
 
@@ -119,3 +163,5 @@ Your site will be in the **dist** folder. Copy these files to your
 web space or setup your web server to publish dist folder.
 
 **If you want anything in root directory (e.g. ads.txt file) create it in /static folder**
+
+**You have to build the site, after any new post in wordpress** 
