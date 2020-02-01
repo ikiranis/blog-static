@@ -1,6 +1,6 @@
 # Static blog page, with Vue/Gridsome and Wordpress
 
-Create a static blog page, using Vue/Gridsome (for frontend) and Wordress (for backend).
+Create a static blog page, using Vue/Gridsome (for frontend) and Wordpress (for backend).
 
 ### Demo
 
