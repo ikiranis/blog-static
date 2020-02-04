@@ -86,5 +86,22 @@
         width: 100%;
     }
 
+    code {
+        background: #000000;
+        border-left: 10px solid grey;
+        border-right: 10px solid grey;
+        color: #ffffff !important;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+    }
+
 </style>
 
