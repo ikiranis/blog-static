@@ -43,14 +43,23 @@
 			Footer, Search, Adsense
 		},
 
-		data() {
-			return {
-				adsenseEnabled: process.env.GRIDSOME_ADSENSE_ENABLED,
-				adsenseClient: process.env.GRIDSOME_ADSENSE_CLIENT,
-				adsenseSlot: process.env.GRIDSOME_ADSENSE_SLOT,
-				searchEnabled: process.env.GRIDSOME_GOOGLE_SEARCH_ENABLED
+        computed: {
+			adsenseEnabled() {
+				return process.env.GRIDSOME_ADSENSE_ENABLED
+			},
+
+			adsenseClient() {
+				return process.env.GRIDSOME_ADSENSE_CLIENT
+			},
+
+			adsenseSlot() {
+				return process.env.GRIDSOME_ADSENSE_SLOT
+			},
+
+			searchEnabled() {
+				return process.env.GRIDSOME_GOOGLE_SEARCH_ENABLED
 			}
-		}
+        }
 	}
 </script>
 
