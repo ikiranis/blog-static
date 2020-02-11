@@ -26,9 +26,11 @@
 
     <div v-html="$page.wordPressPost.content" />
 
-    <comment />
+    <div v-if="commentsEnabled === 'true'">
+      <comment />
 
-    <comments  />
+      <comments  />
+    </div>
 
   </Layout>
 </template>
@@ -71,6 +73,12 @@ query WordPressPost ($id: ID!) {
 
 export default {
   components: { Comments, Comment },
+
+  data() {
+    return {
+      commentsEnabled: process.env.GRIDSOME_WP_COMMENTS_ENABLED
+    }
+  },
 
   metaInfo () {
     return {

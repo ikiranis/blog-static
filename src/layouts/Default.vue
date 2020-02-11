@@ -8,7 +8,7 @@
                 </g-link>
             </div>
 
-            <div class="row mt-3 mb-3">
+            <div v-if="searchEnabled === 'true'" class="row mt-3 mb-3">
                 <div class="col-lg-6 col-12 mx-auto">
                     <search/>
                 </div>
@@ -16,9 +16,10 @@
 
             <slot/>
 
-            <Adsense class="mb-3 mt-3"
-                     ad-client="ca-pub-4611864067867074"
-                     ad-slot="3220919277"
+            <Adsense v-if="adsenseEnabled === 'true'"
+                     class="mb-3 mt-3"
+                     :ad-client="adsenseClient"
+                     :ad-slot="adsenseSlot"
                      ad-style="display:block"
                      ad-format="auto"
                      data_full_width_responsive="true">
@@ -39,6 +40,14 @@
 	export default {
 		components: {
 			Footer, Search, Adsense
+		},
+		data() {
+			return {
+				adsenseEnabled: process.env.GRIDSOME_ADSENSE_ENABLED,
+				adsenseClient: process.env.GRIDSOME_ADSENSE_CLIENT,
+				adsenseSlot: process.env.GRIDSOME_ADSENSE_SLOT,
+				searchEnabled: process.env.GRIDSOME_GOOGLE_SEARCH_ENABLED
+			}
 		}
 	}
 </script>
