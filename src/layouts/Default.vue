@@ -44,15 +44,15 @@
 
         computed: {
 			adsenseEnabled() {
-				return process.env.GRIDSOME_ADSENSE_ENABLED
+				return process.env.GRIDSOME_GOOGLE_ADSENSE_ENABLED
 			},
 
 			adsenseClient() {
-				return process.env.GRIDSOME_ADSENSE_CLIENT
+				return process.env.GRIDSOME_GOOGLE_ADSENSE_CLIENT
 			},
 
 			adsenseSlot() {
-				return process.env.GRIDSOME_ADSENSE_SLOT
+				return process.env.GRIDSOME_GOOGLE_ADSENSE_SLOT
 			},
 
 			searchEnabled() {
