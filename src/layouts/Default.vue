@@ -16,14 +16,15 @@
 
             <slot/>
 
-            <Adsense v-if="adsenseEnabled === 'true'"
-                     class="mb-3 mt-3"
-                     :ad-client="adsenseClient"
-                     :ad-slot="adsenseSlot"
-                     ad-style="display:block"
-                     ad-format="auto"
-                     data_full_width_responsive="true">
-            </Adsense>
+            <div v-if="adsenseEnabled === 'true'">
+                <Adsense class="mb-3 mt-3"
+                         :ad-client="adsenseClient"
+                         :ad-slot="adsenseSlot"
+                         ad-style="display:block"
+                         ad-format="auto"
+                         data_full_width_responsive="true">
+                </Adsense>
+            </div>
 
         </div>
 
@@ -41,6 +42,7 @@
 		components: {
 			Footer, Search, Adsense
 		},
+
 		data() {
 			return {
 				adsenseEnabled: process.env.GRIDSOME_ADSENSE_ENABLED,
