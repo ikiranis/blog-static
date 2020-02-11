@@ -16,15 +16,14 @@
 
             <slot/>
 
-            <div v-if="adsenseEnabled === 'true'">
-                <Adsense class="mb-3 mt-3"
-                         :ad-client="adsenseClient"
-                         :ad-slot="adsenseSlot"
-                         ad-style="display:block"
-                         ad-format="auto"
-                         data_full_width_responsive="true">
-                </Adsense>
-            </div>
+            <Adsense v-if="adsenseEnabled === 'true'"
+                     class="mb-3 mt-3"
+                     :adClient="adsenseClient"
+                     :adSlot="adsenseSlot"
+                     adStyle="display:block"
+                     adFormat="auto"
+                     data_full_width_responsive="true">
+            </Adsense>
 
         </div>
 
