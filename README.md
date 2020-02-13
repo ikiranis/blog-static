@@ -68,6 +68,12 @@ You can take a key from <https://api.wordpress.org/secret-key/1.1/salt/>
 
 ### Set multimedia full path for files, at wordrpess settings
 
+or add this line to wp-config.php
+
+```
+define( 'WP_CONTENT_URL', 'https://api.mysite.com/wp-content' );
+```
+
 ### Create a user, with editor role, for comments (used for authentication on comments Wordpress API)
 
 ### Make an empty theme and set wordpress to use this
