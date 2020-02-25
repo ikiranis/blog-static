@@ -182,9 +182,10 @@ web space or setup your web server to publish dist folder.
 
 You can use the script checkNewPosts.sh in your crontab to build the project. 
 
-Make the file executable
+Rename checkNewPosts.sh.sample Make the file executable
 
 ```
+cp checkNewPosts.sh.sample checkNewPosts.sh
 sudo chmod +x checkNewPosts.sh
 ```
 
