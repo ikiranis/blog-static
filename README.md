@@ -177,3 +177,27 @@ web space or setup your web server to publish dist folder.
 **You have to build the site, after any new post in wordpress** 
 
 **Change /src/favicon.png and /src/images/logo.jpg with your images**
+
+### Automatic build using crontab
+
+You can use the script checkNewPosts.sh in your crontab to build the project. 
+
+Make the file executable
+
+```
+sudo chmod +x checkNewPosts.sh
+```
+
+Edit the file with your settings
+
+Edit crontab file
+
+```
+crontab -e
+```
+
+Add this line to check for new posts every 10 minutes 
+
+```
+*/10 * * * *    <project full path>/checkNewPosts.sh
+```
