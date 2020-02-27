@@ -11,13 +11,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 // $ npm i --save @fortawesome/free-solid-svg-icons
 // $ npm i --save @fortawesome/vue-fontawesome
 // $ npm i --save @fortawesome/free-brands-svg-icons
-import {library} from '@fortawesome/fontawesome-svg-core'
+import {library, config} from '@fortawesome/fontawesome-svg-core'
 // import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import {faEnvelopeOpen} from '@fortawesome/free-solid-svg-icons'
 import {faRss} from '@fortawesome/free-solid-svg-icons'
+import {faHome} from '@fortawesome/free-solid-svg-icons'
 import {faTwitter} from '@fortawesome/free-brands-svg-icons'
 import {faFacebook} from '@fortawesome/free-brands-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+config.autoAddCss = false;
+library.add(faTwitter, faFacebook, faEnvelopeOpen, faRss, faHome)
 
 export default function (Vue, {head}) {
 	Vue.component('Layout', DefaultLayout)
@@ -51,11 +56,6 @@ export default function (Vue, {head}) {
 			async: true
 		}
 	)
-
-	library.add(faTwitter)
-	library.add(faFacebook)
-	library.add(faEnvelopeOpen)
-	library.add(faRss)
 
 	Vue.component('font-awesome-icon', FontAwesomeIcon)
 
