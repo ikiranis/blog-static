@@ -16,7 +16,7 @@
                 <div class="form-group row">
                     <div class="col-12">
                         <input id="email" type="email" class="form-control"
-                               v-model="comment.email" required placeholder="enail">
+                               v-model="comment.email" required placeholder="email">
                     </div>
                 </div>
 
