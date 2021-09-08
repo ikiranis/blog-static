@@ -65,7 +65,7 @@
 <style>
 
     .wraper {
-        font-family: "Comfortaa", cursive;
+        font-family: "Comfortaa", Arial, Helvetica, sans-serif;
         font-size: 20px;
     }
 
