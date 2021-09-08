@@ -13,7 +13,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@gridsome/plugin-google-analytics": "^0.1.1",
     "@gridsome/plugin-sitemap": "^0.2.3",
-    "@gridsome/source-wordpress": "^0.4.0",
+    "@gridsome/source-wordpress": "^0.5.3",
     "bootstrap-vue": "^2.15.0",
     "gridsome": "^0.7.15",
     "gridsome-plugin-rss": "^1.2.0",
