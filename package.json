@@ -17,6 +17,6 @@
     "bootstrap-vue": "^2.15.0",
     "gridsome": "^0.7.15",
     "gridsome-plugin-rss": "^1.2.0",
-    "moment": "^2.26.0"
+    "moment": "^2.29.2"
   }
 }
