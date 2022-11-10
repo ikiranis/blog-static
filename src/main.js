@@ -33,6 +33,11 @@ export default function (Vue, {head}) {
 		rel: 'stylesheet',
 		href: 'https://fonts.googleapis.com/css?family=Comfortaa'
 	})
+	
+	head.link.push({
+		rel: 'me',
+		href: 'https://mastodon.social/@rocean'
+	})
 
 	head.link.push({
 		rel: 'alternate',
