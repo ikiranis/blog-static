@@ -38,6 +38,11 @@ export default function (Vue, {head}) {
 		rel: 'me',
 		href: 'https://mastodon.social/@rocean'
 	})
+	
+	head.link.push({
+		rel: 'me',
+		href: 'https://mstn.apps4net.eu/@YiannisKiranis'
+	})
 
 	head.link.push({
 		rel: 'alternate',
