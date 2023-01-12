@@ -36,7 +36,7 @@
 			getComments() {
 				axios.get(process.env.GRIDSOME_WORDPRESSURL + '/wp-json/wp/v2/comments?post='
 					+ this.$page.wordPressPost.id
-					+ '&orderby=date&order=asc&per_page=1000')
+					+ '&orderby=date&order=asc&per_page=100')
 					.then((res) => {
 						this.comments = res.data
 					})
